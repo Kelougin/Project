@@ -1,0 +1,518 @@
+/* Header Design */
+header{
+    display: flex; /* Set Display to flex */
+    grid-area: header; /* Set content to take up area header in grid */
+    align-items: center; /* Aligns items to center */
+    position: fixed; /*  Set position to fixed */
+    width: 100%; /* Set width to 100% */
+    z-index: 1000; /* z-index to make sure it shows up above content */
+    background-color: rgba(226, 6, 44, 0.6); /* Background in rgba for opacity  */
+}
+header div {
+    flex-grow: 1; /* Set div to grow  */
+    width: auto; /* Set width to auto */
+    height: 90%; /* Set Height to 90% */
+}
+header div img{
+    width: auto; /* Set width to auto */
+    height: 75px; /* Set height to 75px */
+}
+header nav menu{
+    display: flex; /* Set display to flex */
+    list-style: none; /* Remove list style */
+}
+header nav menu li{
+    padding-right: 30px; /* Set padding on right to 30px */
+    font-size: 20px; /* Set font size to 20px */
+}
+header nav menu li a{
+    text-decoration: none; /* Remove text decoration(underline) */
+    color: #eaeeeb; /* Set color of items */
+    font-family: "Host Grotesk", sans-serif; /* Set the font */
+}
+.hamburger{
+    display: none; /* Remove hamburger from screen for now */
+    cursor: pointer; /* Set cursor to pointer */
+}
+/* Home Page Design */
+.home{
+    display: grid; /* Set body to grid container */
+    grid-auto-columns: 25% 25% 25% 25%; /* Set grid to 4 columns */
+    grid-template-rows: auto; /* Set rows to auto */
+    grid-template-areas: /* Set up grid area */
+    "header header header header"
+    "hero hero hero hero"
+    "main main main aside"
+    "footer footer footer footer";
+    margin: 0px; /* Removes margin */
+    background-color: #F5F5F5; /* Set background color */
+
+}
+/*Mast Head Styling */
+.masthead{
+    grid-area: hero; /* Set grid area to hero */
+    height: 100vh; /* set height to 100% view height */
+    background-image: url("../Images/Hero.jpg"); /* Set background image */
+    background-size: cover; /* Set background size to cover */
+    display: flex; /* set container to flex */
+    align-items: center; /* align items to center */
+    justify-content: center; /* Justify content to center */
+}
+.masthead h1{
+    font-size: 185px; /* Set font size */
+    font-family: "Host Grotesk", sans-serif; /* Set font */
+    color: #eaeeeb; /* Set color of items */
+}
+/*Home Main */
+.Imain{
+    grid-area: main; /* Set grid area to main */
+    display: grid; /* Set container to grid */
+}
+.Imain h3{
+    text-align: center; /* align text to center */
+    font-size: 35px; /* Set font size */
+    font-family: "Host Grotesk", sans-serif; /* Set font */
+
+}
+.Imain p{
+    font-size: 25px; /* set font size to 25px */
+    line-height: 38px; /* set line-height to 38px */
+    text-align: center; /* align text to center */
+    padding-left: 2%; /* padding left side 2% */
+    padding-right: 2%; /* Padding right side 2% */
+    font-family: "Open Sans", sans-serif; /* Set font */
+}
+.welcome, .choose {
+    border-bottom: solid 1px black; /* Set border */
+}
+.container{
+    width: 90%; /* Set width */
+    height: 500px; /* Set height */
+    display: flex; /* Set container to flex */
+    justify-content: center; /* justify content to center */
+    padding: 0 5%; /* Set padding */
+}
+.rotate{
+    height: 100%; /* set height */
+    width: 100%; /* set width */
+    display: flex; /* set container to flex */
+    position: relative; /* set position to relative */
+    align-items: center; /* align items to center */
+}
+.pic1, .pic2, .pic3{
+    background-size: contain; /* contains background */
+    background-position: center; /* background position center */
+    background-repeat: no-repeat; /* stop image from repeating */
+    width: 100%; /* Set width */
+}
+.pic1{
+    background-image: url("../Images/rotateNES.jpg"); /* set background image */
+}
+.pic2{
+    background-image: url("../Images/rotateTFC.jpg"); /* set background image */
+}
+.pic3{
+    background-image: url("../Images/rotateTNES.jpg"); /* set background image */
+}
+.rotate [class*="pic"]{
+    overflow: hidden; /* hides overflow */
+    position: absolute; /* set position */
+    transition: all 1s ease-out; /* set transition */
+}
+.rotate [class*="pic"]:nth-child(1){
+    height: 100%; /* set height */
+    z-index: 1; /* set z-index */
+}
+.rotate [class*="pic"]:nth-child(2){
+    height: 100%; /* set height */
+    z-index: 2; /* set z-index */
+}
+.rotate [class*="pic"]:nth-child(3){
+    height: 100%; /* set height */
+    z-index: 3; /* set z-index */
+}
+.aside{
+    grid-area: aside; /* Set grid area aside */
+    display: flex; /* Set container to flex */
+    flex-direction: column; /* Set flex direction to column */
+    background-color: #e2062c; /* Set background color */
+}
+.aside h4{
+    display: flex; /* Set container to flex */
+    justify-content: center; /* justify content to center */
+    color: #eaeeeb; /* Set color of items */
+    font-size: 30px; /* Set font size */
+    font-family: "Host Grotesk", sans-serif; /* Set font */
+}
+.aside article{
+    display: flex; /* Set container to flex */
+    flex-direction: column; /* Set flex direction to column */
+}
+.asideproduct{
+    padding-right: 2%; /* Set padding right to 2% */
+    padding-left: 2%; /* Set padding left to 2% */
+}
+.aside h5{
+    display: flex; /* Set container to flex */
+    justify-content: center; /* justify content to center */
+    margin: 0px; /* remove margin */
+    padding-top: 5%; /* Padding top 5% */
+    padding-bottom: 1%; /* Padding bottom 1% */
+    color: #eaeeeb; /* Set color of items */
+    font-size: 25px; /* Set font size to 25px */
+    font-family: "Host Grotesk", sans-serif; /* Set font */
+}
+.aside a{
+    display: flex; /* Set container to flex */
+    justify-content: center; /* justify content to center */
+    text-decoration: none; /* remove text decoration */
+    border: solid 4px #F5F5F5; /* Set border */
+    margin: 5% 10%; /* Set margin */
+    padding: 5%; /* Set padding */
+    color: #eaeeeb; /* Set color of items */
+    font-size: 20px; /* set font size */
+    font-family: "Host Grotesk", sans-serif; /* Set font */
+}
+.aside p{
+  text-align: center; /* aligns text to center */
+    padding-right: 2%; /* set padding right */
+    padding-left: 2%; /* set padding left */
+    margin-bottom: 0px; /* remove margin from bottom */
+    color: #eaeeeb; /* Set color of items */
+    font-size: 20px; /* Set font size */
+    font-family: "Open Sans", sans-serif; /* Set font */
+}
+/*Other body Layout */
+.second{
+    display: grid; /* set container to grid */
+    grid-auto-columns: 25% 25% 25% 25%; /* set up 4 columns */
+    grid-template-rows: auto; /* Set grid rows to auto */
+    grid-template-areas: /* setup grid areas */
+    "header header header header"
+    "hero hero hero hero"
+    "main main main main"
+    "footer footer footer footer";
+    margin: 0px; /* remove margin */
+    background-color: #F5F5F5; /* set background color */
+}
+/*Shop Main Layout */
+.shop{
+    grid-area: main; /* Set grid area */
+}
+.shop h2{
+    text-align: center; /* align text center */
+    border: 2px solid transparent; /* Invisible border */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 22px rgba(0, 0, 0, 0.17); /* Creates floating effect */
+    background-color: #F5F5F5; /* Sets background color */
+    font-size: 40px; /* Set font size */
+    margin: 7px; /* Set margin to 7px */
+    font-family: "Host Grotesk", sans-serif; /* Set font */
+}
+.shop div{
+    display: grid; /* Set display to grid */
+    grid-template-columns:50% 50% ; /* Set up 2 columns */
+    position: relative; /* make position relative */
+    padding: 20px; /* Set padding to 20px all sides */
+    border: 2px solid transparent; /* Invisible border*/
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2), 0 0 22px rgba(0, 0, 0, 0.17); /* Creates floating effect */
+    background-color: #F5F5F5; /* Sets background color */
+    margin: 7px; /* set margin to 7px */
+}
+.shop img{
+    height: 300px; /* Set height to 300px */
+    padding: 1%; /* Set padding to 1% */
+    width: 530px; /* Set width to 530px */
+}
+.shop a{
+    width: 540px; /* set width to 540px */
+}
+.title{
+    list-style: none; /* remove list style */
+    text-align: center; /* aligns text to center */
+    font-size: 30px; /* set font size to 30px */
+    margin-top: 0px; /* removes top margin */
+    font-family: "Host Grotesk", sans-serif; /* Set font */
+}
+.feature{
+    list-style: none; /* Removes list style */
+    padding: 2% 2% 0 2%; /* Set padding */
+    font-size: 20px; /* Set font size */
+    font-family: "Open Sans", sans-serif; /* set font */
+}
+.featurelist {
+    font-size: 15px; /* Set font size */
+    padding: 2%; /* set padding 2% all sides */
+    font-family: "Open Sans", sans-serif; /* Set font */
+}
+
+/* Contact Main Layout */
+.contact{
+    grid-area: main; /* Set grid area */
+}
+
+.contact div{
+    display: grid; /* set container to grid */
+    justify-content: center; /* justify content to center */
+}
+.contactT{
+    text-align: center; /* aligns text to center */
+    font-size: 25px; /* set font size to 25px */
+    margin-bottom: 30px; /* set bottom margin to 30px */
+    font-family: "Open Sans", sans-serif; /* set font family */
+}
+.contactw{
+    margin-top: 0px; /* remove margin top */
+    padding-bottom: 24px; /* set bottom padding to 24px */
+    display: flex; /* set container to flex */
+    justify-content: center; /* justify content to center */
+}
+.contactf {
+    height: 60px; /* Set height to 60px */
+    width: 400px; /* Set width to 400px */
+    text-align: center; /* align text to center */
+    font-size: 15px; /* set font size */
+    font-family: "Open Sans", sans-serif; /* Set font */
+}
+.contact textarea{
+    height: 60px; /* set height to 60px */
+    width: 400px; /* set width to 400px */
+    text-align: center; /* align text to center */
+    font-size: 15px; /* set font to 15px */
+    font-family: "Open Sans", sans-serif; /* set font */
+}
+.button{
+    border: 2px solid #e2062c; /* set border */
+    background: transparent; /* set background */
+    margin-top: 15px; /* margin top 15px */
+    padding: 2% 3%; /* set padding */
+    font-size: 15px; /* set font size */
+    font-family: "Host Grotesk", sans-serif; /* set font */
+    color: #e2062c; /* set color of items */
+}
+/* Product Design */
+.product{
+    grid-area: main; /* set grid area */
+    display: grid; /* set container to grid */
+    grid-template-columns: 50% 50%; /* set up 2 columns */
+}
+.contain{
+    display: flex; /* set display to flex */
+    justify-content: center; /* justify content to center */
+}
+.product img{
+    height: 400px; /* set height to 400px */
+    padding: 2%; /* set padding to 2% */
+    width: 95%; /* set width to 95% */
+}
+.product a{
+    text-decoration: none; /* remove text decoration */
+    border: 2px solid  #e2062c; /* set up border */
+    padding: 2%; /* set padding */
+    color: #e2062c; /* set up color */
+}
+.productTitle{
+    font-size: 35px; /* set font size */
+    text-align: center; /* align text to center */
+    font-family: "Host Grotesk", sans-serif; /* set font */
+}
+.about{
+    font-size: 25px; /* set font size */
+    margin-bottom: 0px; /* remove bottom margin */
+    font-family: "Open Sans", sans-serif; /* set font */
+}
+.producttext{
+    font-size: 20px; /* set font size */
+    font-family: "Open Sans", sans-serif; /* set font */
+}
+.buy{
+    font-size: 25px; /* set font size */
+    text-align: center; /* align text center */
+    font-family: "Host Grotesk", sans-serif; /* set font */
+}
+/* Footer Design */
+footer{
+    grid-area: footer; /* set grid area */
+    display: grid; /* set display to grid */
+    grid-template-columns: 25% 50% 25%; /* set up grid columns */
+    background: #303030; /* set background color */
+}
+footer div{
+    display: flex; /* set container to flex */
+    align-items: center; /* align items to center */
+    padding: 2%; /* set padding to 2% */
+}
+footer img{
+    height: 55px; /* set height to 55px */
+    width: auto; /* set width to auto */
+    justify-content: center; /* justify content center */
+}
+footer a{
+    text-decoration: none; /* remove text decoration */
+    font-family: "Host Grotesk", sans-serif; /* set font */
+}
+footer p, footer li{
+    color: #eaeeeb; /* set color of items */
+}
+footer h6{
+    margin-bottom: 0px; /* remove bottom margin */
+    font-size: 20px; /* set font size */
+    margin-top: 0; /* remove top margin */
+    color: #eaeeeb; /* set color of items */
+    font-family: "Host Grotesk", sans-serif; /* set font */
+    padding-right: 17px; /* padding right 17px */
+}
+.privacy{
+    justify-content: center; /* justify content center */
+    font-size: 25px; /* set font size */
+}
+.FContact{
+    display: flex; /* set container to flex */
+    flex-direction: column; /* set flex direction */
+    flex-wrap: wrap; /* wrap flex container */
+    align-content: flex-end; /* align content to end of container */
+}
+.LContact{
+    display: flex; /* set container to flex */
+    flex-direction: column; /* set flex direction to column */
+    margin: 2px; /* set margin to 2px */
+}
+.LContact li{
+    margin: 0px; /* remove margin */
+    font-size: 15px; /* set font size */
+    font-family: "Open Sans", sans-serif; /* set font */
+}
+/*Responsive Styling */
+@media (max-width: 1200px){
+    .slide{
+        padding-bottom: 2%; /* Setting padding bottom 2% */
+    }
+}
+@media (max-width: 1024px){
+    .masthead{
+        text-align: center; /* align text to center */
+        line-height: 166px; /* set line "spacing" */
+    }
+    .shop div{
+        grid-template-columns: 100%; /* set grid column to 100% */
+        justify-items: center; /* justify items to center */
+    }
+    .shop img{
+        align-items: center; /* align items to center */
+    }
+}
+@media(max-width: 768px){
+    .aside h4{
+        text-align: center; /* align text to center */
+    }
+    .product{
+        grid-template-columns: 100%; /* set up 1 column */
+    }
+    .FContact{
+        align-content: center; /* align content to center */
+        padding-left: 30px; /* set padding of left side */
+    }
+    footer{
+        grid-template-columns: 100%; /* set up 1 column */
+    }
+    footer div{
+        justify-content: center; /* justify content to center */
+    }
+}
+@media (max-width: 675px) {
+    .home {
+        grid-template-areas: /* set up grid template areas */
+    "header header header header"
+    "hero hero hero hero"
+    "main main main main"
+    "aside aside aside aside"
+    "footer footer footer footer";
+    }
+
+    .masthead h1 {
+        font-size: 80px; /* set font size */
+    }
+
+    aside {
+        grid-area: aside; /* set grid area */
+    }
+}
+    @media (max-width: 552px) {
+    header nav{
+        display: none; /* set display to none */
+        width: 100%; /* set width */
+        position: absolute; /* set position to absolute */
+        height: 100vh; /* set height to 100% view height */
+        z-index: 500; /* z-index for priority */
+        background-color: rgba(226, 6, 44, 0.6); /* set background color */
+        top: 0; /* Set position to top so items appear */
+        left: 0; /* set position of left so items appear */
+    }
+        header nav.active{
+            display: block; /* set container to block when active */
+        }
+        header nav menu{
+            display: flex; /* set container to flex */
+            flex-direction: column; /* set flex direction */
+            padding-top: 15%; /* set top padding */
+            padding-left: 0px; /* remove left padding */
+        }
+        header nav menu li{
+            display: flex; /* set container to flex */
+            color: #eaeeeb; /* set color of items */
+            padding: 2%; /* set padding 2% */
+            width: 100%; /* set width */
+            text-align: center; /* align text to center */
+            border: 1px solid #eaeeeb; /* set border */
+            margin-bottom: -1px; /* remove margin */
+            font-size: 30px; /* set font size */
+        }
+        .hamburger{
+            display: flex; /* set container to flex */
+            position: absolute; /* set position to absolute */
+            top: 10px; /* set top so hamburger appears */
+            right: 10px; /* set right so hamburger goes to top right */
+            z-index: 1000; /* set z-index so it had priority */
+            cursor: pointer; /* set cursor to pointer */
+            font-size: 40px; /* set font size */
+        }
+        header li{
+            display: block; /* set display to block */
+        }
+        header li a{
+            width: 100%; /* set width */
+        }
+    .shop img{
+        width: auto; /* set width */
+        height: 150px; /* set height */
+    }
+        .shop a{
+            width: auto; /* set width */
+        }
+        .container{
+            height: 300px; /* Set height */
+        }
+    }
+    @media (max-width: 457px) {
+        .masthead h1 {
+            line-height: 88px; /* set line height */
+        }
+        header div img{
+            height: 75px; /* set height */
+        }
+    }
+    @media (max-width: 376px) {
+        header div img{
+            height: 66px; /* set height */
+        }
+        .contactf{
+            width: auto; /* set width */
+        }
+        .contact textarea{
+            width: 177px; /* set width */
+        }
+    }
+@media (max-width: 321px){
+    header div img{
+        height: 60px; /* set height */
+    }
+}
